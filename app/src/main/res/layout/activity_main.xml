@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kashmoney.tipcalculator.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/total_bill_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome_linear_layout"
+        android:layout_marginEnd="11dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_toStartOf="@+id/welcome_linear_layout"
+        android:elevation="5dp"
+        android:text="@string/total_bill"
+        android:textColor="#ff333333"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/total_amount_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/total_bill_text_view"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/currency_text_view"
+        android:ems="10"
+        android:hint="@string/enter_amount"
+        android:inputType="numberDecimal"
+        android:maxLength="7"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/currency_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/total_bill_text_view"
+        android:layout_below="@+id/total_bill_text_view"
+        android:layout_marginTop="10dp"
+        android:elevation="5dp"
+        android:paddingTop="5dp"
+        android:textColor="#ff333333"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/enter_tip_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/total_bill_text_view"
+        android:layout_below="@+id/total_amount_edit_text"
+        android:layout_marginTop="35dp"
+        android:elevation="5dp"
+        android:text="@string/tip_percent_text"
+        android:textColor="#ff333333"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/suggestTip_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:contentDescription="@string/suggest_a_tip"
+        android:src="@android:drawable/ic_menu_help"
+        android:layout_below="@+id/enter_tip_text_view"
+        android:layout_alignParentEnd="true" />
+
+    <SeekBar
+        android:id="@+id/tip_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/enter_tip_text_view"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/total_bill_text_view"
+        android:layout_toStartOf="@id/suggestTip_image_button"
+        android:max="100"
+        android:progress="15"
+        android:progressTint="@color/colorAccent"
+        android:thumbTint="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/people_paying_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/total_bill_text_view"
+        android:layout_below="@+id/tip_seek_bar"
+        android:layout_marginTop="35dp"
+        android:elevation="5dp"
+        android:text="@string/split_bill_in"
+        android:textColor="#ff333333"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/people_paying_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/people_paying_text_view"
+        android:layout_below="@+id/people_paying_text_view"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/enter_people"
+        android:inputType="number"
+        android:maxLength="2"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/people_paying_edit_text"
+        android:layout_centerHorizontal="true"
+        android:text="@string/calculate_button" />
+
+    <TextView
+        android:id="@+id/tip_percent_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tip_seek_bar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_toLeftOf="@+id/tip_seek_bar"
+        android:text="@string/tip_percent"
+        android:textColor="#ff000000"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:id="@+id/welcome_linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:src="@drawable/tip_calc_pic" />
+    </LinearLayout>
+
+</android.widget.RelativeLayout>

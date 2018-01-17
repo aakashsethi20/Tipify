@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kashmoney.tipcalculator.SettingsActivity">
+
+
+    <TextView
+        android:id="@+id/default_currency_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="46dp"
+        android:text="Default Currency"
+        android:textColor="#ff333333"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:id="@+id/dollar_radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/default_currency_text_view"
+        android:layout_below="@+id/default_currency_text_view"
+        android:layout_marginTop="10dp"
+        android:text="Dollar ($)" />
+
+    <RadioButton
+        android:id="@+id/euro_radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dollar_radio_button"
+        android:layout_below="@+id/dollar_radio_button"
+        android:text="Euro (€)" />
+
+    <RadioButton
+        android:id="@+id/pound_radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/euro_radio_button"
+        android:layout_below="@+id/euro_radio_button"
+        android:text="Pound (£)" />
+
+    <TextView
+        android:id="@+id/default_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/pound_radio_button"
+        android:layout_below="@+id/pound_radio_button"
+        android:layout_marginTop="34dp"
+        android:text="Default Tip"
+        android:textColor="#ff333333"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/default_tip"
+        android:layout_below="@+id/default_tip"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="Enter percent"
+        android:inputType="number" />
+</android.widget.RelativeLayout>

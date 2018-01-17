@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="total_bill">Total Bill</string>
+    <string name="enter_people">Enter number of people</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="calculate_button">Calculate</string>
+    <string name="split_bill_in">Split bill in</string>
+    <string name="tip_percent"></string>
+    <string name="suggest_a_tip">Suggest me a tip</string>
+    <string name="tip_percent_text">Tip Percent (%)</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,25 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Default Currency">
+        <CheckBoxPreference
+            android:title="Dollars ($)"
+            android:defaultValue="true"
+            android:key="dollar_check_box_pref" />
+        <CheckBoxPreference
+            android:title="Pounds (£)"
+            android:defaultValue="false"
+            android:key="pound_check_box_pref"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Tip Settings" >
+        <EditTextPreference
+            android:key="default_tip"
+            android:title="Default Tip"
+            android:defaultValue="15"
+            android:inputType="number"
+            android:maxLength="2"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>
